@@ -48,7 +48,8 @@ async function send() {
 
 const token = tokenFrom(document.cookie);
 if (token) {
-    document.getElementById('auth').classList.add('hidden');
     document.getElementById('content').classList.remove('hidden');
     document.getElementById('submit').addEventListener('click', send);
+} else {
+    document.getElementById('auth').classList.remove('hidden');
 }
