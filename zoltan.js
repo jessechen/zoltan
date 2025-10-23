@@ -11,6 +11,8 @@ function getCookie(name) {
 
 async function send() {
     try {
+        const imageEl = document.getElementById("fortuneImage");
+
         const raw = encoder
             .initialize()
             .align('center')
@@ -20,6 +22,8 @@ async function send() {
             .line('NAND')
             .size(1)
             .line("don't bogart me")
+            .newline()
+            .image(imageEl, 256, 256)
             .newline()
             .line('this stuff is for everyone.')
             .line('take what you need')
