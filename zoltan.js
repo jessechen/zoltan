@@ -1,4 +1,6 @@
-const encoder = new ReceiptPrinterEncoder();
+const encoder = new ReceiptPrinterEncoder({
+    printerModel: "epson-tm-t88v"
+});
 
 function tokenFrom(cookie) {
   return (
@@ -25,8 +27,8 @@ async function send() {
             .line('take what you need')
             .line('as long as you share.')
             .newline()
+            .rule({ style: 'single'})
             .line('zoltan.recurse.com')
-            .newline(5)
             .cut()
             .encode();
 
