@@ -26,6 +26,7 @@ async function send() {
             .line('as long as you share.')
             .newline()
             .line('zoltan.recurse.com')
+            .newline(5)
             .cut()
             .encode();
 
