@@ -1,14 +1,12 @@
 const encoder = new ReceiptPrinterEncoder({
-    printerModel: "epson-tm-t88v"
+    printerModel: "epson-tm-t88v",
+    imageMode: "raster",
 });
 
-function tokenFrom(cookie) {
-  return (
-    cookie
-      .split("; ")
-      .find((row) => row.startsWith("receipt_csrf="))
-      ?.split("=")[1] || ""
-  );
+function getCookie(name) {
+  const value = `; ${document.cookie}`;
+  const parts = value.split(`; ${name}=`);
+  if (parts.length === 2) return parts.pop()?.split(";").shift();
 }
 
 async function send() {
@@ -48,7 +46,7 @@ async function send() {
     }
 }
 
-const token = tokenFrom(document.cookie);
+const token = getCookie("receipt_csrf");
 if (token) {
     document.getElementById('content').classList.remove('hidden');
     document.getElementById('submit').addEventListener('click', send);

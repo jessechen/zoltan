@@ -7,7 +7,8 @@ Commonly deployed in 1980s arcades, including a legally distinct reference in th
 Production
 ----------
 
-~~[GitHub Pages](https://jessechen.github.io/zoltan)~~
+[GitHub Pages](zoltan.recurse.com)
+Requires Recurse Center OAuth access!
 
 Prior Art
 ---------
