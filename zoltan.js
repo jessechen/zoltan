@@ -16,6 +16,7 @@ async function send() {
         const raw = encoder
             .initialize()
             .align('center')
+            .newline()
             .line("today's fortune:")
             .newline()
             .size(2)
@@ -30,6 +31,7 @@ async function send() {
             .line('as long as you share.')
             .newline()
             .rule({ style: 'single'})
+            .line('daily fortunes from')
             .line('zoltan.recurse.com')
             .cut()
             .encode();
