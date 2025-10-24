@@ -16,23 +16,23 @@ async function send() {
         const raw = encoder
             .initialize()
             .align('center')
-            .newline()
+            .newline() // required to make the align stick
             .line("today's fortune:")
             .newline()
             .size(2)
             .line('NOR')
             .size(1)
             .line("don't bogart me")
-            .newline()
             .image(imageEl, 256, 256, "bayer")
-            .newline()
             .line('this stuff is for everyone.')
             .line('take what you need')
             .line('as long as you share.')
             .newline()
             .rule({ style: 'double'})
+            .newline()
             .line('daily fortunes from')
             .line('zoltan.recurse.com')
+            .newline(2)
             .cut()
             .encode();
 
