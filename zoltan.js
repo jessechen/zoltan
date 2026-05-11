@@ -34,7 +34,7 @@ fortunes.push({
     title: 'NOR',
     imageId: 'norImage',
     subtitle: 'just walk out',
-    text: ['you can always opt out.', 'participate in an unfair system?', 'i would prefer not to.'],
+    text: ['you can leave!', 'participate in an unfair system?', 'i would prefer not to.'],
 });
 fortunes.push({
     title: 'XNOR',
