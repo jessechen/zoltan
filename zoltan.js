@@ -21,7 +21,7 @@ fortunes.push({
 fortunes.push({
     title: 'XOR',
     imageId: 'xorImage',
-    subtitle: 'don\'t overdo it',
+    subtitle: 'one thing at a time',
     text: ['laser. focus.', 'if you chase two rabbits,', 'you will lose them both.'],
 });
 fortunes.push({
