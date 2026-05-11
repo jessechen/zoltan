@@ -3,7 +3,7 @@ const encoder = new ReceiptPrinterEncoder({
     imageMode: "raster",
 });
 
-const fortuneId = 0;
+let fortuneId = 0;
 const fortunes = [];
 fortunes.push({
     title: 'AND',
