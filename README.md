@@ -2,12 +2,12 @@
 
 ## A mechanical fortune teller
 
-Commonly deployed in 1980s arcades, including a legally distinct reference in the movie Big (1988).
+Commonly deployed in 1980s arcades. The legally distinct Zoltar appears in the movie Big (1988).
 
 Production
 ----------
 
-[GitHub Pages](zoltan.recurse.com)
+[GitHub Pages](https://zoltan.recurse.com)
 Requires Recurse Center OAuth access!
 
 Prior Art
