@@ -102,7 +102,7 @@ async function send() {
 
 const token = getCookie("receipt_csrf");
 if (token) {
-    const rng = new RNG(token);
+    const rng = new RNG(Date.now().toDateString() + token);
     fortuneId = Math.floor(rng.uniform() * 6);
     document.getElementById('content').classList.remove('hidden');
     document.getElementById('submit').addEventListener('click', send);
