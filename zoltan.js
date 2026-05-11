@@ -5,6 +5,7 @@ const encoder = new ReceiptPrinterEncoder({
 
 let fortuneId = 0;
 const fortunes = [];
+// Here they are! Was this approach more satisfying than comparing them with other people?
 fortunes.push({
     title: 'AND',
     imageId: 'andImage',
