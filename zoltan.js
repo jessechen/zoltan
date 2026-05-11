@@ -3,6 +3,46 @@ const encoder = new ReceiptPrinterEncoder({
     imageMode: "raster",
 });
 
+
+
+const fortunes = [];
+fortunes.add({
+    title: 'AND',
+    imageId: 'andImage',
+    subtitle: 'i want it all',
+    text: ['yolo, all in!', 'if you shoot for the moon and miss,', 'you\'ll land among the stars.'],
+});
+fortunes.add({
+    title: 'OR',
+    imageId: 'orImage',
+    subtitle: 'more is more',
+    text: ['why not both?', 'if either is good,', 'do you really have to choose?'],
+});
+fortunes.add({
+    title: 'XOR',
+    imageId: 'xorImage',
+    subtitle: 'don\'t overdo it',
+    text: ['laser. focus.', 'if you chase two rabbits,', 'you will lose them both.'],
+});
+fortunes.add({
+    title: 'NAND',
+    imageId: 'nandImage',
+    subtitle: 'sharing is caring',
+    text: ['this stuff is for everyone.', 'take what you need', 'as long as you share.'],
+});
+fortunes.add({
+    title: 'NOR',
+    imageId: 'norImage',
+    subtitle: 'not today, world',
+    text: ['you can always opt out.', 'participate in an unfair system?', 'i would prefer not to.'],
+});
+fortunes.add({
+    title: 'XNOR',
+    imageId: 'xnorImage',
+    subtitle: 'all or nothing',
+    text: ['go big or go home.', 'if it\'s worth doing,', 'it\'s worth doing right.'],
+});
+
 function getCookie(name) {
   const value = `; ${document.cookie}`;
   const parts = value.split(`; ${name}=`);
@@ -13,7 +53,7 @@ async function send() {
     document.getElementById('form').classList.add('hidden');
     document.getElementById('submit').setAttribute('disabled', 'disabled');
     try {
-        const imageEl = document.getElementById("fortuneImage");
+        const imageEl = document.getElementById(fortune.imageId);
 
         const raw = encoder
             .initialize()
@@ -22,13 +62,13 @@ async function send() {
             .line("today's fortune:")
             .newline()
             .size(2)
-            .line('NOR')
+            .line(fortune.title)
             .size(1)
-            .line("don't bogart me")
+            .line(fortune.subtitle)
             .image(imageEl, 256, 256, "bayer")
-            .line('this stuff is for everyone.')
-            .line('take what you need')
-            .line('as long as you share.')
+            .line(fortune.text[0])
+            .line(fortune.text[1])
+            .line(fortune.text[2])
             .newline()
             .rule({ style: 'double'})
             .newline()
