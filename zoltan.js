@@ -27,7 +27,7 @@ fortunes.push({
 fortunes.push({
     title: 'NAND',
     imageId: 'nandImage',
-    subtitle: 'sharing is caring',
+    subtitle: 'puff puff pass',
     text: ['this stuff is for everyone.', 'take what you need', 'as long as you share.'],
 });
 fortunes.push({
