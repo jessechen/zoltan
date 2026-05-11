@@ -5,37 +5,37 @@ const encoder = new ReceiptPrinterEncoder({
 
 const fortuneId = 0;
 const fortunes = [];
-fortunes.add({
+fortunes.push({
     title: 'AND',
     imageId: 'andImage',
     subtitle: 'i want it all',
     text: ['yolo, all in!', 'if you shoot for the moon and miss,', 'you\'ll land among the stars.'],
 });
-fortunes.add({
+fortunes.push({
     title: 'OR',
     imageId: 'orImage',
     subtitle: 'more is more',
     text: ['why not both?', 'if either is good,', 'do you really have to choose?'],
 });
-fortunes.add({
+fortunes.push({
     title: 'XOR',
     imageId: 'xorImage',
     subtitle: 'don\'t overdo it',
     text: ['laser. focus.', 'if you chase two rabbits,', 'you will lose them both.'],
 });
-fortunes.add({
+fortunes.push({
     title: 'NAND',
     imageId: 'nandImage',
     subtitle: 'sharing is caring',
     text: ['this stuff is for everyone.', 'take what you need', 'as long as you share.'],
 });
-fortunes.add({
+fortunes.push({
     title: 'NOR',
     imageId: 'norImage',
     subtitle: 'not today, world',
     text: ['you can always opt out.', 'participate in an unfair system?', 'i would prefer not to.'],
 });
-fortunes.add({
+fortunes.push({
     title: 'XNOR',
     imageId: 'xnorImage',
     subtitle: 'all or nothing',
