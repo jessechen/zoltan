@@ -10,6 +10,8 @@ function getCookie(name) {
 }
 
 async function send() {
+    document.getElementById('form').classList.add('hidden');
+    document.getElementById('submit').setAttribute('disabled', 'disabled');
     try {
         const imageEl = document.getElementById("fortuneImage");
 
@@ -46,9 +48,11 @@ async function send() {
             throw new Error(`Response status: ${response.status}`);
         }
         const result = await response.json();
+        document.getElementById('response').innerText = "Your fortune awaits you at the recipt printer next to the printer printer on the fourth floor.";
         console.log(result);
     } catch (error) {
         console.error(error.message);
+        document.getElementById('response').innerText = error.message;
     }
 }
 

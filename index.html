@@ -11,12 +11,15 @@
 <script defer src="zoltan.js"></script>
     <main id="auth" class="hidden">
         You are not authenticated. Please
-        <a href="https://receipt.recurse.com/login">
-              log in to the receipt printer API.
-        </a>
+<a href="https://receipt.recurse.com/login">log in to the receipt printer API.</a>
     </main>
     <main id="content" class="hidden">
-        <button id="submit" type="submit">Print!</button>
+        <form id="form">
+            <button id="submit" type="submit">Print!</button>
+        </form>
+        <section id="response">
+            &nbsp;
+        </section>
     </main>
     <aside class="hidden">
         <img src="img/NOR.png" id="fortuneImage">
