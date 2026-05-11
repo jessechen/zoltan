@@ -3,8 +3,7 @@ const encoder = new ReceiptPrinterEncoder({
     imageMode: "raster",
 });
 
-
-
+const fortuneId = 0;
 const fortunes = [];
 fortunes.add({
     title: 'AND',
@@ -50,6 +49,10 @@ function getCookie(name) {
 }
 
 async function send() {
+    if (fortuneId === 0) {
+        return;
+    }
+    const fortune = fortunes[fortuneId];
     document.getElementById('form').classList.add('hidden');
     document.getElementById('submit').setAttribute('disabled', 'disabled');
     try {
@@ -98,6 +101,8 @@ async function send() {
 
 const token = getCookie("receipt_csrf");
 if (token) {
+    const rng = new RNG(token);
+    fortuneId = Math.ceil(rng.uniform() * 6);
     document.getElementById('content').classList.remove('hidden');
     document.getElementById('submit').addEventListener('click', send);
 } else {
