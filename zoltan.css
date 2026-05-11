@@ -2,13 +2,13 @@ body {
     box-sizing: border-box;
 }
 
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
 body, input, button {
     font-family: Seravek, 'Gill Sans Nova', Ubuntu, Calibri, 'DejaVu Sans', source-sans-pro, sans-serif;
     font-size: 1rem;
-}
-
-*, *:before, *:after {
-    box-sizing: inherit;
 }
 
 .hidden {
@@ -16,7 +16,7 @@ body, input, button {
 }
 
 .intro {
-      place-items: center;
+    place-items: center;
 }
 
 img {

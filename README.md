@@ -1,6 +1,6 @@
 # Zoltan
 
-## A mechanical fortune teller
+## A fortunetelling machine
 
 Commonly deployed in 1980s arcades. The legally distinct Zoltar appears in the movie Big (1988).
 
