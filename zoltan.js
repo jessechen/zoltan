@@ -33,7 +33,7 @@ fortunes.push({
 fortunes.push({
     title: 'NOR',
     imageId: 'norImage',
-    subtitle: 'not today, world',
+    subtitle: 'just walk out',
     text: ['you can always opt out.', 'participate in an unfair system?', 'i would prefer not to.'],
 });
 fortunes.push({
