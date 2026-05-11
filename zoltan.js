@@ -48,7 +48,7 @@ async function send() {
             throw new Error(`Response status: ${response.status}`);
         }
         const result = await response.json();
-        document.getElementById('response').innerText = "Your fortune awaits you at the recipt printer next to the printer printer on the fourth floor.";
+        document.getElementById('response').innerText = "Your fortune awaits you! Specifically, it awaits you at the recipt printer on the fourth floor, next to the printer printer.";
         console.log(result);
     } catch (error) {
         console.error(error.message);

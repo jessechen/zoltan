@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script src="lib/receipt-printer-encoder.umd.js"></script>
     <link rel="stylesheet" href="zoltan.css"/>
-    <title>zoltan</title>
+    <title>Zoltan - Daily Fortuneteller</title>
 </head>
 <body>
 <script defer src="zoltan.js"></script>
@@ -15,14 +15,23 @@
     </main>
     <main id="content" class="hidden">
         <form id="form">
-            <button id="submit" type="submit">Print!</button>
+            <section class="intro">
+                <h1>I can tell your fortune!</h1>
+                <img src="zoltan.jpg" alt="Photograph of a 1963 Zoltan fortuneteller arcade machine" />
+            </section>
+            <p>But with one restriction! Please, only request one if you have physical access to 397 Bridge Street to retrieve your fortune, or can convince a person there to be your hands.</p>
+            <label for="submit">Zoltan, what will the day bring?</label>
+            <button id="submit" type="submit">I must know!</button>
         </form>
-        <section id="response">
-            &nbsp;
-        </section>
+        <section id="response"></section>
     </main>
     <aside class="hidden">
-        <img src="img/NOR.png" id="fortuneImage">
+        <img src="img/AND.png" id="fortuneImage1" />
+        <img src="img/OR.png" id="fortuneImage2" />
+        <img src="img/XOR.png" id="fortuneImage3" />
+        <img src="img/NAND.png" id="fortuneImage4" />
+        <img src="img/NOR.png" id="fortuneImage5" />
+        <img src="img/XNOR.png" id="fortuneImage6" />
     </aside>
 </body>
 </html>
