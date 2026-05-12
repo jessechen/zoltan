@@ -5,7 +5,7 @@ const encoder = new ReceiptPrinterEncoder({
 
 let fortuneId = 0;
 const fortunes = [];
-// Here they are! Was this approach more satisfying than comparing them with other people?
+// Yes, here they are! Before you continue, would it be more fun to discover them by comparing with other people?
 fortunes.push({
     title: 'AND',
     imageId: 'andImage',
@@ -102,7 +102,7 @@ async function send() {
 
 const token = getCookie("receipt_csrf");
 if (token) {
-    const rng = new RNG(Date.now().toDateString() + token);
+    const rng = new RNG(new Date().toDateString() + token);
     fortuneId = Math.floor(rng.uniform() * 6);
     document.getElementById('content').classList.remove('hidden');
     document.getElementById('submit').addEventListener('click', send);
